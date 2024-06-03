@@ -6,7 +6,9 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 IT IS IMPORTANT TO NOTE THAT SOME WORDS ARE NOT YET ADDED.
 
-MANY WORDS AND THEIR CONJUGATES ARE NOT IN THE DICTIONARY!!!!!!!!!!!!!!!
+MANY WORDS AND THEIR CONJUGATES ARE NOT IN THE DICTIONARY
+
+The script itself works fine.
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
