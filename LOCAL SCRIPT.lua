@@ -54,8 +54,18 @@ plr.Chatted:Connect(function(msg)
 		end
 		if found == false then
 			new_message = new_message..str.." " -- This will simply keep the word as it is in english if it cant be translated.
+
+--[[
+IT IS IMPORTANT TO NOTE THAT SOME WORDS ARE NOT YET ADDED.
+
+please use /e shoomish before your sentence to use the translator. 
+
+If you have any problems, DM @WLncstr
+]]
 		end
 	end
 	print(new_message)
 	chat:Chat(plr.Character.Head,new_message,Enum.ChatColor.White) -- chats the translated message. 
 end)
+
+
