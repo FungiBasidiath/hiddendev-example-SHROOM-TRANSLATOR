@@ -8,7 +8,11 @@ print(#dictionary)
 print(dictionary[1])
 
 
---[[ So the huge thing at line 4
+--[[ 
+
+So the huge thing at line 4 is the dictionary. 
+
+Then, in line 6, it's split into a table so that the dictionary can be accessed more easily. 
 
 ]]
 
@@ -16,6 +20,12 @@ for index,str in pairs(dictionary) do
 	dictionary[index] = string.split(str,":") -- 1 is english, 2 is shoomish
 	dictionary[index][2] = string.split(dictionary[index][2],"= ")[2]
 end
+
+--[[
+The above forloop is used to split the table we already have into new tables. It divides each instance into an ENGLISH and SHROOMISH instance. 
+
+The SHROOMISh part also contains what type of word it is (adjective, noun, etc). Line 21 cuts that out.
+]]
 
 plr.Chatted:Connect(function(msg)
 
