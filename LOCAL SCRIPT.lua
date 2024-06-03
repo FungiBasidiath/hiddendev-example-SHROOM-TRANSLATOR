@@ -73,7 +73,7 @@ plr.Chatted:Connect(function(msg)
 		end
 	end
 	print(new_message)
-	chat:Chat(plr.Character.Head,new_message,Enum.ChatColor.White) -- chats the translated message. 
+	game:GetService("ReplicatedStorage"):WaitForChild("Scroom").SPEAK:FireServer(new_message)
 end)
 
 
