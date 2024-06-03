@@ -30,27 +30,32 @@ The SHROOMISh part also contains what type of word it is (adjective, noun, etc).
 plr.Chatted:Connect(function(msg)
 
 	msg = string.lower(msg)
-	if string.find(msg,"/e shoomish ") ==  nil then return end
+	if string.find(msg,"/e shoomish ") ==  nil then return end  -- this will only translate things that are preceeded by the command. 
 	msg = string.gsub(msg,"/e shoomish ","")
 	local new_message = ""
-	local words = string.split(msg," ")
+	local words = string.split(msg," ") -- pretty self explanitory, just finds all the individual words
 
-	for index,str in pairs(words) do
-		local untranslated = false
-		local found = false
+
+	for index,str in pairs(words) do -- this translates each word
+		local untranslated = false 
+		local found = false 
 		for i,v in pairs(dictionary) do
-			local english = string.split(string.gsub(v[1]," ",""),",")
-			for ind,val in pairs(english) do
+			local english = string.split(string.gsub(v[1]," ",""),",") -- since certain synonyms have the same translation, this will account for that and seperate each synonym in the english string. 
+			for ind,val in pairs(english) do 
 				new_message = string.find(str.." ",val.." ") ~=  nil and new_message..string.gsub(str,val,v[2]).." " or new_message
+					--[[
+					Line 45 {{string.find(str.." ",val.." ")}} will check for each word and check if it matches with a translatable word.
+					If so, it is translated into a shroomish word and adds it to the message string. 
+					]]
 				if string.find(str.." ",val.." ") ~= nil then
 					found = true
 				end
 			end
 		end
 		if found == false then
-			new_message = new_message..str.." "
+			new_message = new_message..str.." " -- This will simply keep the word as it is in english if it cant be translated.
 		end
 	end
 	print(new_message)
-	chat:Chat(plr.Character.Head,new_message,Enum.ChatColor.White)
+	chat:Chat(plr.Character.Head,new_message,Enum.ChatColor.White) -- chats the translated message. 
 end)
