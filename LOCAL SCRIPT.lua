@@ -1,3 +1,17 @@
+--[[
+IT IS IMPORTANT TO NOTE THAT SOME WORDS ARE NOT YET ADDED.
+
+MANY ARE NOT IN THE DICTIONARY
+
+Some words to try:
+
+Hello, kill, dust, ethnicity, etc. I need to add more words.
+
+please use /e shoomish before your sentence to use the translator. 
+
+If you have any problems, DM @WLncstr
+]]
+
 local plr = game.Players.LocalPlayer 
 local translate = true
 local chat = game:GetService("Chat")
@@ -55,13 +69,7 @@ plr.Chatted:Connect(function(msg)
 		if found == false then
 			new_message = new_message..str.." " -- This will simply keep the word as it is in english if it cant be translated.
 
---[[
-IT IS IMPORTANT TO NOTE THAT SOME WORDS ARE NOT YET ADDED.
 
-please use /e shoomish before your sentence to use the translator. 
-
-If you have any problems, DM @WLncstr
-]]
 		end
 	end
 	print(new_message)
